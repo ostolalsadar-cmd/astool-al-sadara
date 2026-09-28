@@ -1,72 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090909">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#050505">
 <title>أسطول الصدارة | تأجير السيارات</title>
 <style>
 *{box-sizing:border-box}
-html,body{margin:0;min-height:100%;font-family:Tahoma,Arial,sans-serif}
-body{
- min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px;
- color:#fff;overflow-x:hidden;
- background:
- radial-gradient(circle at 15% 15%,rgba(212,170,55,.22),transparent 28%),
- radial-gradient(circle at 85% 80%,rgba(255,198,66,.13),transparent 30%),
- linear-gradient(135deg,#050505 0%,#17130a 45%,#050505 100%);
- position:relative;
+html,body{margin:0;width:100%;min-height:100%;background:#050505}
+body{font-family:Arial,Tahoma,sans-serif;display:flex;justify-content:center}
+.page{
+  position:relative;width:100%;max-width:1024px;
+  min-height:100vh;overflow:hidden;
+  background:#050505 url("background.png") center top/100% auto no-repeat;
+  aspect-ratio:1024/1536;
 }
-body:before{
- content:"";position:fixed;inset:-30%;
- background:conic-gradient(from 20deg,transparent 0 20%,rgba(218,177,67,.07) 25%,transparent 33%,rgba(255,255,255,.025) 48%,transparent 60%);
- animation:spin 22s linear infinite;pointer-events:none;
+.hotspot{
+  position:absolute;display:block;z-index:5;
+  border-radius:30px;
+  background:transparent;
+  outline:none;
+  -webkit-tap-highlight-color:transparent;
 }
-@keyframes spin{to{transform:rotate(360deg)}}
-.card{
- position:relative;width:min(440px,100%);padding:30px 22px 24px;text-align:center;
- border:1px solid rgba(220,184,77,.55);border-radius:28px;
- background:linear-gradient(180deg,rgba(25,25,25,.94),rgba(8,8,8,.96));
- box-shadow:0 25px 70px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.07);
- backdrop-filter:blur(10px);
+.google{left:6.5%;top:73.2%;width:29%;height:7.2%}
+.snap{left:36.5%;top:73.2%;width:29%;height:7.2%}
+.tiktok{left:67%;top:73.2%;width:29%;height:7.2%}
+@media (max-width:700px){
+  .page{min-height:100vh;aspect-ratio:auto;background-size:100% auto;background-position:center top}
+  .hotspot{height:6.2%}
+  .google{top:76.0%}
+  .snap{top:76.0%}
+  .tiktok{top:76.0%}
 }
-.card:after{
- content:"";position:absolute;inset:9px;border:1px solid rgba(218,177,67,.13);
- border-radius:21px;pointer-events:none;
-}
-.logo{
- position:relative;z-index:1;width:88px;height:88px;margin:0 auto 15px;border-radius:50%;
- display:flex;align-items:center;justify-content:center;
- border:2px solid #d7b34f;color:#e6c568;font-size:34px;font-weight:800;
- background:radial-gradient(circle,#33280f,#0b0b0b 68%);
- box-shadow:0 0 35px rgba(218,177,67,.22),inset 0 0 20px rgba(218,177,67,.08);
-}
-h1{position:relative;z-index:1;margin:0;color:#e6c568;font-size:30px;letter-spacing:.2px}
-.sub{position:relative;z-index:1;margin:7px 0 24px;color:#d7d0bd;font-size:14px}
-a{
- position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:11px;
- min-height:56px;margin:13px 0;padding:14px 18px;border-radius:15px;
- text-decoration:none;font-size:17px;font-weight:800;
- transition:transform .18s,box-shadow .18s;
-}
-a:hover{transform:translateY(-2px)}
-.google{background:#fff;color:#222;box-shadow:0 8px 25px rgba(255,255,255,.08)}
-.snap{background:linear-gradient(135deg,#fff000,#f0d400);color:#111;box-shadow:0 8px 25px rgba(255,220,0,.12)}
-.tiktok{background:#101010;color:#fff;border:1px solid #686868;box-shadow:0 8px 25px rgba(0,0,0,.35)}
-.note{position:relative;z-index:1;margin:22px 0 0;color:#8f8b80;font-size:11px}
 </style>
 </head>
 <body>
-<main class="card">
-  <div class="logo">ص</div>
-  <h1>أسطول الصدارة</h1>
-  <div class="sub">لتأجير السيارات • تواصل معنا عبر منصاتنا</div>
-
-  <a class="google" href="https://maps.app.goo.gl/4sBrP4ADqBgGpTX79" target="_blank" rel="noopener">⭐ تقييمنا على Google</a>
-  <a class="snap" href="https://snapchat.com/t/0SjLI67K" target="_blank" rel="noopener">👻 تابعنا على Snapchat</a>
-  <a class="tiktok" href="https://www.tiktok.com/@masqat22" target="_blank" rel="noopener">🎵 تابعنا على TikTok</a>
-
-  <div class="note">امسح أو المس شريحة NFC للوصول إلى الصفحة</div>
+<main class="page" aria-label="أسطول الصدارة لتأجير السيارات">
+  <a class="hotspot google" href="https://maps.app.goo.gl/4sBrP4ADqBgGpTX79" target="_blank" rel="noopener" aria-label="تقييمنا على Google"></a>
+  <a class="hotspot snap" href="https://snapchat.com/t/0SjLI67K" target="_blank" rel="noopener" aria-label="تابعنا على Snapchat"></a>
+  <a class="hotspot tiktok" href="https://www.tiktok.com/@masqat22" target="_blank" rel="noopener" aria-label="تابعنا على TikTok"></a>
 </main>
 </body>
 </html>
