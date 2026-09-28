@@ -2,28 +2,35 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#050505">
 <title>أسطول الصدارة | تأجير السيارات</title>
 <style>
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:#050505}
+html,body{margin:0;padding:0;background:#050505;width:100%;min-height:100%}
 body{display:flex;justify-content:center}
 .page{position:relative;width:100%;max-width:1024px;line-height:0}
-.page img{display:block;width:100%;height:auto}
-.link{position:absolute;display:block;z-index:5;border-radius:40px;cursor:pointer;
--webkit-tap-highlight-color:transparent;touch-action:manipulation}
-.google{left:6%;top:78.0%;width:29%;height:6.5%}
-.snap{left:35.7%;top:78.0%;width:29%;height:6.5%}
-.tiktok{left:65.8%;top:78.0%;width:29%;height:6.5%}
+.page img{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+.hotspot{
+  position:absolute;display:block;z-index:10;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+  border-radius:60px;
+}
+.google{left:6.0%;top:79.35%;width:28.3%;height:7.0%}
+.snap{left:35.7%;top:79.35%;width:28.3%;height:7.0%}
+.tiktok{left:66.0%;top:79.35%;width:28.3%;height:7.0%}
+@media (max-width:600px){
+  .google,.snap,.tiktok{height:7.2%}
+}
 </style>
 </head>
 <body>
 <main class="page">
-<img src="background.png" alt="أسطول الصدارة لتأجير السيارات">
-<a class="link google" href="https://maps.app.goo.gl/4sBrP4ADqBgGpTX79" aria-label="تقييمنا على Google"></a>
-<a class="link snap" href="https://snapchat.com/t/0SjLI67K" aria-label="تابعنا على Snapchat"></a>
-<a class="link tiktok" href="https://www.tiktok.com/@masqat22" aria-label="تابعنا على TikTok"></a>
+  <img src="background.png" alt="أسطول الصدارة لتأجير السيارات">
+  <a class="hotspot google" href="https://maps.app.goo.gl/4sBrP4ADqBgGpTX79" aria-label="تقييمنا على Google"></a>
+  <a class="hotspot snap" href="https://snapchat.com/t/0SjLI67K" aria-label="تابعنا على Snapchat"></a>
+  <a class="hotspot tiktok" href="https://www.tiktok.com/@masqat22" aria-label="تابعنا على TikTok"></a>
 </main>
 </body>
 </html>
